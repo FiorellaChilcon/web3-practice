@@ -12,8 +12,8 @@ router.post('/perform', async function(req, res) {
   try {
     const data = await ethereumNode.sendMoney(req.body);
     return res.json(data);
-  } catch (e) {
-    return res.json(e);
+  } catch (error) {
+    return res.json({ error });
   }
 });
 
