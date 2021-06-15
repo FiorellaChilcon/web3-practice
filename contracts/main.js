@@ -31,19 +31,20 @@ const input = {
 const output = JSON.parse(solc.compile(JSON.stringify(input)));
 const bytecode = output.contracts.cars.Cars.evm.bytecode.object;
 
-const nonce = web3.eth.getTransactionCount(address1);
-const rawTx = {
-  nonce: web3.utils.toHex(nonce),
-  gasPrice: web3.utils.toHex(web3.utils.toWei('2', 'gwei')),
-  gastLimit: web3.utils.toHex(1000000),
-  to: null,
-  data: `0x${bytecode}`
-}
-
-const tx = new Tx(rawTx, { chain: 'ropsten' })
-tx.sign(privateKeyBuffer);
-const serializedTx = tx.serialize().toString('hex');
-
-web3.eth.sendSignedTransaction(`0x${serializedTx}`).on('receipt', (receipt) => {
-  console.log(`Contract deployed: ${receipt.contractAddress}`);
+web3.eth.getTransactionCount(address1, (err, nonce) => {
+  const rawTx = {
+    nonce: web3.utils.toHex(nonce),
+    gasPrice: web3.utils.toHex(web3.utils.toWei('2', 'gwei')),
+    gastLimit: web3.utils.toHex(1000000),
+    to: null,
+    data: `0x${bytecode}`
+  }
+  
+  const tx = new Tx(rawTx, { chain: 'ropsten' })
+  tx.sign(privateKeyBuffer);
+  const serializedTx = tx.serialize().toString('hex');
+  
+  web3.eth.sendSignedTransaction(`0x${serializedTx}`).on('receipt', (receipt) => {
+    console.log(`Contract deployed: ${receipt.contractAddress}`);
+  });
 });
