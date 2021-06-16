@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.8.4;
+pragma solidity >=0.8.4;
 
 contract Cars {
   address owner;
@@ -18,7 +18,7 @@ contract Cars {
     _;
   }
 
-  constructor(uint256 _price) {
+  constructor(uint256 _price) payable {
     owner = msg.sender;
     price = _price;
   }
