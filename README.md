@@ -34,7 +34,7 @@ npm start
 returns the transactions of the last block
 
 ### POST /transactions/perform
-transfers money from an address to another
+transfers money from an address to another <br>
 body params:
 ```
 {
@@ -46,7 +46,7 @@ body params:
 ```
 
 ### GET /balance/:address
-returns the balance of the address in ether currency.
+returns the balance of the address in ether currency. <br>
 request params: address
 
 ## How to deploy cars contract
