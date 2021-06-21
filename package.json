@@ -6,6 +6,8 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts": "^4.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ethereumjs-tx": "^2.1.2",
