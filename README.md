@@ -68,7 +68,7 @@ ADDRESS1_KEY=THE_ADDRESS_KEY
 
 ## How to deploy "Coin" contract with openzeppelin?
 1. Open Ganache and select or create a workspace on port 8545.
-2. Open Metamask with network localhost:8545.
+2. Open Metamask with the network localhost:8545.
 3. Compile:
 ```
 npx oz compile
@@ -109,7 +109,7 @@ Choose the BananaCoin contract:
 0x736189SAJKLB58Ll9D983837a6DB0a8091467cG
 ```
 6. Add the token to a metamask account.
-7. Interact with the contract with the following commands:
+7. Interact with the contract with the following commands: <br>
 Use the following to run functions that change the contract state:
 ```
 npx oz send-tx
