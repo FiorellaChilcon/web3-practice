@@ -5,11 +5,19 @@
   "name": "crypto-practice",
   "version": "0.0.0",
   "compiler": {
+    "solcVersion": "0.7.5",
     "compilerSettings": {
-      "optimizer": {}
+      "optimizer": {
+        "enabled": false,
+        "runs": "200"
+      }
     },
     "typechain": {
       "enabled": false
-    }
-  }
+    },
+    "manager": "openzeppelin",
+    "artifactsDir": "build/contracts",
+    "contractsDir": "contracts"
+  },
+  "telemetryOptIn": false
 }

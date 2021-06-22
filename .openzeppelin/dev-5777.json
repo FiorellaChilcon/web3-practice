@@ -1,0 +1,14 @@
+{
+  "contracts": {},
+  "solidityLibs": {},
+  "proxies": {
+    "crypto-practice/BananaCoin": [
+      {
+        "address": "0x4a35b5874FA83b9E596C927eBEf8B45450753904",
+        "kind": "NonProxy",
+        "bytecodeHash": "e61d91a6e01fc9b218076d89afd999877cc3acb07e4e53404040e0e275495fcd"
+      }
+    ]
+  },
+  "manifestVersion": "2.2"
+}

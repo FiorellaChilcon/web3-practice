@@ -14,6 +14,7 @@ contract BananaCoin {
     symbol = _symbol;
     totalSuply = _totalSupply;
     decimals = 18;
+    balanceOf[msg.sender] = _totalSupply;
   }
 
   event Transfer(address indexed _from, address indexed _to, uint256 _value);
