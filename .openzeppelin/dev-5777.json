@@ -4,9 +4,9 @@
   "proxies": {
     "crypto-practice/BananaCoin": [
       {
-        "address": "0x4a35b5874FA83b9E596C927eBEf8B45450753904",
+        "address": "0xBD8df870B78315290BB4A3eCa7810B35521E6BB2",
         "kind": "NonProxy",
-        "bytecodeHash": "e61d91a6e01fc9b218076d89afd999877cc3acb07e4e53404040e0e275495fcd"
+        "bytecodeHash": "74ecd377f895ba6b247b0189d6614e3634edd48a221924289ecc277279ab1fc2"
       }
     ]
   },

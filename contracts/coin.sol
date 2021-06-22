@@ -28,6 +28,12 @@ contract BananaCoin {
     return true;
   }
 
+  function approve(address _spender, uint256 _value) public returns (bool success) {
+    allowance[msg.sender][_spender] = _value;
+    emit Approval(msg.sender, _spender, _value);
+    return true;
+  }
+
   function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
     require(balanceOf[_from] >= _value);
     require(allowance[_from][msg.sender] >= _value);
